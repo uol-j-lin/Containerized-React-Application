@@ -1,0 +1,13 @@
+# docker compose creates image for service using dockerfile
+version: "3.8"
+# how to build image for service, and how to run container for it
+services:
+  api:
+    build: ./Docker
+    container_name: api_c
+    ports:
+      - '4000:4000'
+    volumes:
+      # create volume to map Docker folder on host machine to app folder on container
+      - ./Docker:/app
+      - /app/node_modules
