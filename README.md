@@ -15,5 +15,8 @@ Docker Hub is a cloud-based registry service for storing and sharing Docker imag
 # Dockerfiles
 A Dockerfile is a text file that contains instructions for building a Docker image. It specifies the base image to use, any dependencies that need to be installed, and any other configurations or settings that the image needs.
 
+# Volumes
+Volumes are persistent storage locations used in Docker to store data that needs to be preserved beyond the lifecycle of a single container. They allow data to be stored in a separate location from the container, makes it easier to manage the data and the container separately. This provides better performance and flexibility for certain use cases.
+
 # Exposing Ports
 When running a Docker container, certain ports may need to be exposed on the host machine. This allows access services running inside the container from the host machine, or from other machines on the network. 
