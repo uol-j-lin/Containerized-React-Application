@@ -5,9 +5,20 @@ services:
   api:
     build: ./Docker
     container_name: api_c
+    # port mappings
     ports:
       - '4000:4000'
     volumes:
       # create volume to map Docker folder on host machine to app folder on container
       - ./Docker:/app
       - /app/node_modules
+  myblog:
+    # specify path to Dockerfile
+    build: ./myblog
+    container_name: myblog_c
+    ports:
+     - '3000:3000'
+    # start container in interactive mode (opposite of detached mode)
+    # react container will not automatically shut down
+    stdin_open: true
+    tty: true
